@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Транслит</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="'heading">T.R.A.N.S.L.I.T.</h1>
+      <div class="inputArea">
+        <input type="text" placeholder="Начните вводить текст" id="inputTxt" />
+        <button class="addWordBtn">Добавить</button>
+      </div>
+
+      <section class="resultsConteiner">
+        <div class="wordBoxRow">
+          <div class="wordBoxRowLeft">
+            <span class="number">1</span>
+            <div class="russianWord">Привет 👋🏻</div>
+          </div>
+          <div class="wordBoxRowRight">
+            <div class="translitWord">Privet</div>
+            <div class="deleteWordBtn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 48 48"
+              >
+                <defs>
+                  <mask id="ipSCloseOne0">
+                    <g fill="#fff" stroke-linejoin="round" stroke-width="4">
+                      <path
+                        fill="#fff"
+                        stroke="#fff"
+                        d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"
+                      />
+                      <path
+                        stroke="#000"
+                        stroke-linecap="round"
+                        d="M29.657 18.343L18.343 29.657m0-11.314l11.314 11.314"
+                      />
+                    </g>
+                  </mask>
+                </defs>
+                <path
+                  fill="#747474"
+                  d="M0 0h48v48H0z"
+                  mask="url(#ipSCloseOne0)"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="deleteEverythink">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 48 48"
+        >
+          <defs>
+            <mask id="ipSCloseOne0">
+              <g fill="#fff" stroke-linejoin="round" stroke-width="4">
+                <path
+                  fill="#fff"
+                  stroke="#fff"
+                  d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z"
+                />
+                <path
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  d="M29.657 18.343L18.343 29.657m0-11.314l11.314 11.314"
+                />
+              </g>
+            </mask>
+          </defs>
+          <path fill="#747474" d="M0 0h48v48H0z" mask="url(#ipSCloseOne0)" />
+        </svg>
+        Очистить всё
+      </div>
+    </div>
+  </body>
+</html>

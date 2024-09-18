@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --heading: #4520ab;
+  --addWordBackground: #000;
+  --border: #000;
+  --addWordTxt: #fff;
+  --russianWordBackground: #f0f0f0;
+  --translitWordBackground: #D8D8D8;
+  --deleteEverythinkBtn: #ADADAD;
+  --tooltipTxt: #fff;
+}
+
+body {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: var(--heading);
+  margin-top: 50px;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.inputArea {
+  width: 100%;
+  height: 56px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+::placeholder {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 18px;
+}
+
+.addWordBtn {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  left: 390px;
+  top: 8px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: var(--addWordTxt);
+  background-color: var(--addWordBackground);
+  border: none;
+}
+
+.resultsConteiner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wordBoxRow {
+  min-height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.wordBoxRowLeft,
+.wordBoxRowRight {
+  height: 40px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.wordBoxRowLeft {
+  border-right: 1px solid var(--border);
+  background-color: var(--russianWordBackground);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.wordBoxRowRight {
+  border-left: 1px solid var(--border);
+  background-color: var(--translitWordBackground);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.russianWord,
+.translitWord {
+  width: 210px;
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+.number,
+.deleteWordBtn {
+  width: 30px;
+}
+
+.number {
+  padding-left: 10px;
+}
+
+.deleteWordBtn {
+  padding-right: 10px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.deleteEverythink {
+  width: 176px;
+  height: 38px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--deleteEverythinkBtn);
+  border-radius: 8px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: var(--tooltipTxt);
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 10px;
+  width: 133px;
+  height: auto;
+  bottom: 22px;
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.addWordBtn,
+.deleteEverythink,
+.deleteWordBtn {
+  transition: scale ease-in-out 0.1s;
+}
+
+.addWordBtn:hover,
+.deleteEverythink:hover,
+.deleteWordBtn:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+@media (max-width: 499px) {
+  .container {
+    width: 338px;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+  }
+
+  input {
+    font-size: 15px;
+  }
+
+  ::placeholder {
+    font-size: 15px;
+  }
+
+  .addWordBtn {
+    left: 220px;
+  }
+
+  .russianWord,
+  .translitWord {
+    width: 100px;
+  }
+
+  .deleteWordBtn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .number,
+  .deleteWordBtn {
+    width: 32px;
+  }
+}
